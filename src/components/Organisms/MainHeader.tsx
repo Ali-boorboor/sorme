@@ -5,7 +5,7 @@ import { memo } from "react";
 
 const MainHeader = memo(() => {
   return (
-    <header className="flex flex-col gap-3">
+    <header className="flex flex-col gap-3 bg-white sticky top-0 z-20 border-b border-zinc-300">
       <HeaderTopImage />
       <section className="max-w-[86rem] w-full m-auto flex flex-col gap-3 p-4">
         <HeaderMiddleSection />

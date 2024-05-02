@@ -8,7 +8,7 @@ const ContactSupportSection = memo(() => {
           <h3 className="font-semibold text-black text-3xl">Contact support</h3>
           <p className="font-normal text-black text-lg">Answer as soon as possible</p>
         </div>
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
           <section className="flex items-center justify-center md:justify-between gap-8 lg:flex-nowrap flex-wrap">
             <fieldset className="border-2 border-primary-color flex justify-start items-center p-2 rounded-md w-full lg:basis-1/2 h-20">
               <legend className="font-normal text-black text-xl">Name</legend>
@@ -34,7 +34,7 @@ const ContactSupportSection = memo(() => {
               placeholder="Hello, in my opinion..."
             ></textarea>
           </fieldset>
-          <button className="font-semibold text-white text-xl bg-primary-color py-1 px-8 rounded-3xl w-32 m-auto">
+          <button className="font-semibold text-white text-xl bg-primary-color py-1 px-8 rounded-3xl w-32 m-auto transition-all duration-300 hover:scale-90">
             Send
           </button>
         </form>
