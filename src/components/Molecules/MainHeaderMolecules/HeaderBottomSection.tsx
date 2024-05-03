@@ -3,17 +3,21 @@ import { isDropDownMenuVisible } from "@/contexts/RecoilAtoms";
 import { memo } from "react";
 import { useRecoilState } from "recoil";
 
-const HeaderBottomSection = memo(() => {
+const HeaderBottomSection = memo(({ flexDirection }: any) => {
   const [dropDownMenu, setDropDownMenu] = useRecoilState(isDropDownMenuVisible);
 
   return (
     <>
-      <nav className="flex md:justify-between justify-center flex-wrap gap-4 items-center">
-        <div className="flex items-center md:justify-between justify-center gap-4 flex-wrap">
+      <nav
+        className={`flex ${flexDirection} md:justify-between justify-center flex-wrap gap-4 items-center`}
+      >
+        <div
+          className={`flex ${flexDirection} items-center md:justify-between justify-center gap-4 flex-wrap`}
+        >
           <Link
             // on mouse enter (hovered) show drop-down menu
             onMouseEnter={() => setDropDownMenu(true)}
-            href="#"
+            href="/shop"
             id="product-drop-down"
             className="flex items-center gap-1 font-semibold text-base relative"
           >
@@ -36,37 +40,37 @@ const HeaderBottomSection = memo(() => {
           >
             <section className="flex flex-col gap-4 items-start justify-between border-black border-r-2 pr-2 basis-1/3">
               <Link
-                href="#"
+                href="/shop/cosmetic"
                 className="font-semibold text-lg text-black text-nowrap hover:text-primary-color transition-all duration-300"
               >
                 Cosmetic
               </Link>
               <Link
-                href="#"
+                href="/shop/skin-products"
                 className="font-semibold text-lg text-black text-nowrap hover:text-primary-color transition-all duration-300"
               >
                 Skin products
               </Link>
               <Link
-                href="#"
+                href="/shop/hair-products"
                 className="font-semibold text-lg text-black text-nowrap hover:text-primary-color transition-all duration-300"
               >
                 Hair products
               </Link>
               <Link
-                href="#"
+                href="/shop/bathroom-products"
                 className="font-semibold text-lg text-black text-nowrap hover:text-primary-color transition-all duration-300"
               >
                 Bathroom products
               </Link>
               <Link
-                href="#"
+                href="/shop/health-products"
                 className="font-semibold text-lg text-black text-nowrap hover:text-primary-color transition-all duration-300"
               >
                 health products
               </Link>
               <Link
-                href="#"
+                href="/shop/appliances"
                 className="font-semibold text-lg text-black text-nowrap hover:text-primary-color transition-all duration-300"
               >
                 Appliances

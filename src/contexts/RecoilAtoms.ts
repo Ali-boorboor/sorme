@@ -5,4 +5,9 @@ const isDropDownMenuVisible: RecoilState<boolean> = atom({
   default: false,
 });
 
-export { isDropDownMenuVisible };
+const isMenuVisible: RecoilState<boolean> = atom({
+  key: "isMenuVisible",
+  default: false,
+});
+
+export { isDropDownMenuVisible, isMenuVisible };
