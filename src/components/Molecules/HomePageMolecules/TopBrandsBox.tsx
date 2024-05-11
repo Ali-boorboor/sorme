@@ -1,10 +1,11 @@
-import React, { memo } from "react";
+import { memo } from "react";
+import { TopBrandsBoxPropsType } from "@/types/MoleculesType";
 
-const TopBrandsBox = memo(({ cover }: any) => {
+const TopBrandsBox = memo((props: TopBrandsBoxPropsType) => {
   return (
     <div className="w-96 h-96 flex flex-col items-center">
       <img
-        src={cover}
+        src={props.cover}
         alt="top-brands-box-img"
         className="w-full h-4/5 object-cover rounded-t-3xl"
       />

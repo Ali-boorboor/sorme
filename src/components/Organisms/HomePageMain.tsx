@@ -5,7 +5,6 @@ import TopBrandsSection from "../Molecules/HomePageMolecules/TopBrandsSection";
 import TopBrandsBoxsWrapper from "../Molecules/HomePageMolecules/TopBrandsBoxsWrapper";
 import OurServicesBoxsWrapper from "../Molecules/HomePageMolecules/OurServicesBoxsWrapper";
 import { memo } from "react";
-import HomePageFooter from "./HomePageFooter";
 
 const HomePageMain = memo(() => {
   return (

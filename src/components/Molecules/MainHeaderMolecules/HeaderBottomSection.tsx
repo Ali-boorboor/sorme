@@ -2,17 +2,18 @@ import Link from "next/link";
 import { isDropDownMenuVisible } from "@/contexts/RecoilAtoms";
 import { memo } from "react";
 import { useRecoilState } from "recoil";
+import { HeaderBottomSectionPropsType } from "@/types/MoleculesType";
 
-const HeaderBottomSection = memo(({ flexDirection }: any) => {
+const HeaderBottomSection = memo((props: HeaderBottomSectionPropsType) => {
   const [dropDownMenu, setDropDownMenu] = useRecoilState(isDropDownMenuVisible);
 
   return (
     <>
       <nav
-        className={`flex ${flexDirection} md:justify-between justify-center flex-wrap gap-4 items-center`}
+        className={`flex ${props.flexDirection} md:justify-between justify-center flex-wrap gap-4 items-center`}
       >
         <div
-          className={`flex ${flexDirection} items-center md:justify-between justify-center gap-4 flex-wrap`}
+          className={`flex ${props.flexDirection} items-center md:justify-between justify-center gap-4 flex-wrap`}
         >
           <Link
             // on mouse enter (hovered) show drop-down menu

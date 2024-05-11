@@ -13,7 +13,7 @@ const MainHeader = memo(() => {
     <header className="flex flex-col gap-3 bg-white sticky top-0 z-20 border-b border-zinc-300">
       <HeaderTopImage />
       <section className="max-w-[86rem] w-full m-auto flex flex-col gap-3 p-4">
-        <HeaderMiddleSection />
+        <HeaderMiddleSection seller={true} />
         <button
           className="w-10 h-10 m-auto bg-primary-color p-2 rounded-full inline-block sm:hidden"
           onClick={() => setMenu(!menu)}

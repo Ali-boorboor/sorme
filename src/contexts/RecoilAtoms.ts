@@ -10,4 +10,9 @@ const isMenuVisible: RecoilState<boolean> = atom({
   default: false,
 });
 
-export { isDropDownMenuVisible, isMenuVisible };
+const dashboardActiveLink = atom({
+  key: "dashboardActiveLink",
+  default: "dashboard",
+});
+
+export { isDropDownMenuVisible, isMenuVisible, dashboardActiveLink };

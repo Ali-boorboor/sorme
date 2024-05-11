@@ -1,5 +1,5 @@
-import { memo } from "react";
 import OurServicesBox from "./OurServicesBox";
+import { memo } from "react";
 
 const OurServicesBoxsWrapper = memo(() => {
   return (
