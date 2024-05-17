@@ -26,14 +26,17 @@ const HeaderMiddleSection = memo((props: HeaderMiddleSectionPropsType) => {
             />
           </button>
         )}
-        <button className="flex items-center justify-center gap-1 h-10 text-base p-2 font-semibold text-black bg-white border border-black rounded-md text-nowrap transition-all duration-300 hover:bg-primary-color hover:scale-105">
+        <Link
+          href="/login"
+          className="flex items-center justify-center gap-1 h-10 text-base p-2 font-semibold text-black bg-white border border-black rounded-md text-nowrap transition-all duration-300 hover:bg-primary-color hover:scale-105"
+        >
           Sign In / SingUp
           <img
             src="/images/png/user-icon.png"
             alt="user-icon"
             className="object-cover w-5 h-5 brightness-0"
           />
-        </button>
+        </Link>
         <Link
           href="/dashboard"
           className="flex items-center justify-center rounded-md w-10 h-10 bg-secondary-color relative transition-all duration-300 hover:scale-95 after:absolute after:h-full after:w-1 after:border-l after:border-black after:-left-4"
